@@ -11,6 +11,6 @@ async def get_data(id: int, endpoint: str):
             print(f"Закончил выполнение {id}, status={resp.status}")
 
 async def main():
-    await asyncio.gather(*[get_data(i, "async") for i in range(3)])
+    await asyncio.gather(*[get_data(i, "async") for i in range(300)])
 
 asyncio.run(main())
